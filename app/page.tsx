@@ -1,103 +1,234 @@
 import Image from "next/image";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Star } from "lucide-react";
+import { FadeIn, StaggerContainer, StaggerItem } from "@/components/animations";
+
+const featuredItems = [
+  {
+    id: 1,
+    name: "Signature Espresso Blend",
+    description: "Our house blend featuring notes of chocolate and caramel, crafted from premium Ethiopian and Colombian beans.",
+    price: "$4.50",
+    image: "https://images.unsplash.com/photo-1485808191679-5f86510681a2?w=400&h=400&fit=crop&crop=center",
+    badge: "Popular"
+  },
+  {
+    id: 2,
+    name: "Artisan Croissant",
+    description: "Buttery, flaky pastry made fresh daily with French butter and organic flour.",
+    price: "$3.75",
+    image: "https://images.unsplash.com/photo-1549007953-2f2dc0b24019?w=400&h=400&fit=crop&crop=center",
+    badge: "Fresh Daily"
+  },
+  {
+    id: 3,
+    name: "Lavender Honey Latte",
+    description: "A soothing blend of espresso, steamed milk, and locally sourced lavender honey.",
+    price: "$5.25",
+    image: "https://images.unsplash.com/photo-1578314675249-a6910f80cc4e?w=400&h=400&fit=crop&crop=center",
+    badge: "Seasonal"
+  }
+];
+
+const testimonials = [
+  {
+    id: 1,
+    name: "Sarah Johnson",
+    text: "The perfect spot for my morning coffee and remote work. The atmosphere is incredibly welcoming and the coffee is exceptional.",
+    rating: 5
+  },
+  {
+    id: 2,
+    name: "Michael Chen",
+    text: "Bella Geo has become our go-to date night spot. The evening ambiance with soft lighting and jazz music is simply perfect.",
+    rating: 5
+  },
+  {
+    id: 3,
+    name: "Emily Rodriguez",
+    text: "Amazing pastries and the friendliest staff in town. This place feels like a warm hug every time I visit.",
+    rating: 5
+  }
+];
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="flex flex-col">
+      {/* Hero Section */}
+      <section className="relative h-[90vh] flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?w=1920&h=1080&fit=crop&crop=center"
+            alt="Cozy café interior with warm lighting"
+            width={1920}
+            height={1080}
+            className="object-cover w-full h-full"
+            priority
+          />
+          <div className="absolute inset-0 bg-black/40" />
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+
+        <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
+          <h1 className="text-5xl md:text-7xl font-serif font-bold mb-6 leading-tight">
+            Welcome to <span className="text-accent">Bella Geo</span>
+          </h1>
+          <p className="text-xl md:text-2xl mb-8 max-w-2xl mx-auto leading-relaxed">
+            Where exceptional coffee meets warm community. Experience artisan craftsmanship in every cup.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-lg px-8 py-3">
+              <Link href="/menu">View Our Menu</Link>
+            </Button>
+            <Button asChild variant="outline" size="lg" className="text-lg px-8 py-3 border-white text-white hover:bg-white hover:text-primary">
+              <Link href="/contact">Book a Table</Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section className="py-16 lg:py-24 bg-background">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <FadeIn direction="right">
+              <h2 className="text-4xl lg:text-5xl font-serif font-bold text-foreground mb-6">
+                Our Story
+              </h2>
+              <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
+                Born from a passion for exceptional coffee and genuine community, Bella Geo opened its doors in 2019.
+                We believe that great coffee is more than just a beverage—it&apos;s a catalyst for connection, conversation, and creativity.
+              </p>
+              <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
+                Every morning, we carefully craft each cup using ethically sourced beans from sustainable farms around the world.
+                Our cozy lounge space provides the perfect backdrop for work, study, or simply enjoying life&apos;s simple pleasures.
+              </p>
+              <Button asChild variant="outline" size="lg">
+                <Link href="/about">Learn More About Us</Link>
+              </Button>
+            </FadeIn>
+            <FadeIn direction="left" delay={0.2}>
+              <div className="relative h-[500px] rounded-lg overflow-hidden">
+                <Image
+                  src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=600&h=500&fit=crop&crop=center"
+                  alt="Barista carefully preparing coffee"
+                  width={600}
+                  height={500}
+                  className="object-cover w-full h-full"
+                />
+              </div>
+            </FadeIn>
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Items */}
+      <section className="py-16 lg:py-24 bg-muted/30">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <FadeIn className="text-center mb-12">
+            <h2 className="text-4xl lg:text-5xl font-serif font-bold text-foreground mb-4">
+              Featured Favorites
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Discover our most beloved creations, crafted with passion and served with pride.
+            </p>
+          </FadeIn>
+
+          <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {featuredItems.map((item) => (
+              <StaggerItem key={item.id}>
+                <Card className="overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                  <div className="relative h-64">
+                    <Image
+                      src={item.image}
+                      alt={item.name}
+                      width={400}
+                      height={256}
+                      className="object-cover w-full h-full"
+                    />
+                    <Badge className="absolute top-4 right-4 bg-primary text-primary-foreground">
+                      {item.badge}
+                    </Badge>
+                  </div>
+                  <CardHeader>
+                    <div className="flex justify-between items-start">
+                      <CardTitle className="text-xl font-serif">{item.name}</CardTitle>
+                      <span className="text-lg font-semibold text-primary">{item.price}</span>
+                    </div>
+                    <CardDescription className="text-muted-foreground">
+                      {item.description}
+                    </CardDescription>
+                  </CardHeader>
+                </Card>
+              </StaggerItem>
+            ))}
+          </StaggerContainer>
+
+          <FadeIn delay={0.4} className="text-center mt-12">
+            <Button asChild size="lg">
+              <Link href="/menu">Explore Full Menu</Link>
+            </Button>
+          </FadeIn>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section className="py-16 lg:py-24 bg-background">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <FadeIn className="text-center mb-12">
+            <h2 className="text-4xl lg:text-5xl font-serif font-bold text-foreground mb-4">
+              What Our Guests Say
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              The warmth of our community shines through in every review.
+            </p>
+          </FadeIn>
+
+          <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {testimonials.map((testimonial) => (
+              <StaggerItem key={testimonial.id}>
+                <Card className="text-center">
+                  <CardHeader>
+                    <div className="flex justify-center mb-4">
+                      {[...Array(testimonial.rating)].map((_, i) => (
+                        <Star key={i} className="h-5 w-5 fill-accent text-accent" />
+                      ))}
+                    </div>
+                    <CardDescription className="text-lg italic leading-relaxed">
+                      &ldquo;{testimonial.text}&rdquo;
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="font-semibold text-foreground">{testimonial.name}</p>
+                  </CardContent>
+                </Card>
+              </StaggerItem>
+            ))}
+          </StaggerContainer>
+        </div>
+      </section>
+
+      {/* Call to Action */}
+      <section className="py-16 lg:py-24 bg-primary text-primary-foreground">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-4xl lg:text-5xl font-serif font-bold mb-6">
+            Ready to Experience Bella Geo?
+          </h2>
+          <p className="text-xl mb-8 max-w-2xl mx-auto leading-relaxed">
+            Join us for exceptional coffee, delicious food, and warm hospitality. We can&apos;t wait to welcome you.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button asChild size="lg" variant="secondary" className="text-lg px-8 py-3">
+              <Link href="/contact">Visit Us Today</Link>
+            </Button>
+            <Button asChild size="lg" variant="outline" className="text-lg px-8 py-3 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
+              <Link href="/gallery">See Our Space</Link>
+            </Button>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
