@@ -9,65 +9,31 @@ import { X } from "lucide-react";
 
 const galleryImages = [
     {
-        src: "https://images.unsplash.com/photo-1501339847302-ac426a4a24a5?w=800&h=600&fit=crop&crop=center",
+        src: "/gone.jpeg",
         alt: "Cozy interior with comfortable seating and warm lighting",
         category: "Interior"
     },
     {
-        src: "https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=800&h=600&fit=crop&crop=center",
+        src: "/gtwo.jpeg",
         alt: "Barista crafting the perfect latte art",
         category: "Coffee"
     },
     {
-        src: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=800&h=600&fit=crop&crop=center",
+        src: "/gthree.jpeg",
         alt: "Fresh pastries and coffee beans display",
         category: "Food"
     },
     {
-        src: "https://images.unsplash.com/photo-1521017432531-fbd92d768814?w=800&h=600&fit=crop&crop=center",
+        src: "/gfour.jpeg",
         alt: "Reading nook with books and soft lighting",
         category: "Interior"
     },
     {
-        src: "https://images.unsplash.com/photo-1559116315-702b0b4774ce?w=800&h=600&fit=crop&crop=center",
+        src: "/gfive.jpeg",
         alt: "Coffee roasting equipment and beans",
         category: "Coffee"
     },
-    {
-        src: "https://images.unsplash.com/photo-1549007953-2f2dc0b24019?w=800&h=600&fit=crop&crop=center",
-        alt: "Artisan croissants fresh from the oven",
-        category: "Food"
-    },
-    {
-        src: "https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=800&h=600&fit=crop&crop=center",
-        alt: "Elegant dining area with natural light",
-        category: "Interior"
-    },
-    {
-        src: "https://images.unsplash.com/photo-1485808191679-5f86510681a2?w=800&h=600&fit=crop&crop=center",
-        alt: "Perfect espresso shot being pulled",
-        category: "Coffee"
-    },
-    {
-        src: "https://images.unsplash.com/photo-1578314675249-a6910f80cc4e?w=800&h=600&fit=crop&crop=center",
-        alt: "Lavender honey latte with beautiful presentation",
-        category: "Coffee"
-    },
-    {
-        src: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=600&fit=crop&crop=center",
-        alt: "Fresh salad bowl with quinoa and vegetables",
-        category: "Food"
-    },
-    {
-        src: "https://images.unsplash.com/photo-1517242027094-631f8c218a0f?w=800&h=600&fit=crop&crop=center",
-        alt: "Evening ambiance with soft lighting and cocktails",
-        category: "Interior"
-    },
-    {
-        src: "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=800&h=600&fit=crop&crop=center",
-        alt: "Beautifully plated breakfast dish",
-        category: "Food"
-    }
+
 ];
 
 const categories = ["All", "Interior", "Coffee", "Food"];
