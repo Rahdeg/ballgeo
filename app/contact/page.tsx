@@ -11,7 +11,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
-import { MapPin, Phone, Mail, Clock, Instagram, Facebook, Twitter } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, Instagram } from "lucide-react";
 
 const formSchema = z.object({
     name: z.string().min(2, {
@@ -32,17 +32,17 @@ const contactInfo = [
     {
         icon: MapPin,
         title: "Visit Us",
-        details: ["123 Coffee Street", "Downtown District", "City, ST 12345"]
+        details: ["18b Lalubu Road", "Oke-Ilewo Road, Abeokuta", "Ogun State, Nigeria"]
     },
     {
         icon: Phone,
         title: "Call Us",
-        details: ["(555) 123-4567", "Daily: 7:00 AM - 9:00 PM"]
+        details: ["+234 818 775 8404", "Daily: 7:00 AM - 9:00 PM"]
     },
     {
         icon: Mail,
         title: "Email Us",
-        details: ["hello@bellageo.com", "We'll respond within 24 hours"]
+        details: ["info@bellagiocafé.com", "We'll respond within 24 hours"]
     },
     {
         icon: Clock,
@@ -81,8 +81,8 @@ export default function Contact() {
             <section className="relative h-[50vh] flex items-center justify-center overflow-hidden">
                 <div className="absolute inset-0 z-0">
                     <Image
-                        src="https://images.unsplash.com/photo-1517242027094-631f8c218a0f?w=1920&h=600&fit=crop&crop=center"
-                        alt="Welcoming café exterior"
+                        src="/hero.png"
+                        alt="Welcoming Bellagio Café exterior"
                         width={1920}
                         height={600}
                         className="object-cover w-full h-full"
@@ -249,14 +249,14 @@ export default function Contact() {
                             {/* Embedded Map */}
                             <div className="mb-6 h-64 bg-muted rounded-lg overflow-hidden">
                                 <iframe
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.215313418993!2d-73.98823492404069!3d40.758896041819794!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25855c6480299%3A0x55194ec5a1ae072e!2sTimes%20Square!5e0!3m2!1sen!2sus!4v1703123456789!5m2!1sen!2sus"
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.8536796842547!2d3.3360079!3d7.1570556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103a4c779ca5660f%3A0xce990315ee5f7580!2sBellagio%20Cafe%20and%20lounge!5e0!3m2!1sen!2sus!4v1703123456789!5m2!1sen!2sus"
                                     width="100%"
                                     height="100%"
-                                    style={{ border: 0 }}
+                                    className="border-0"
                                     allowFullScreen
                                     loading="lazy"
                                     referrerPolicy="no-referrer-when-downgrade"
-                                    title="Bella Geo Café Location"
+                                    title="Bellagio Café Location"
                                 />
                             </div>
 
@@ -265,42 +265,30 @@ export default function Contact() {
                                 <CardHeader>
                                     <CardTitle className="text-xl font-serif">Visit Our Café</CardTitle>
                                     <CardDescription>
-                                        Located in the heart of downtown, we&apos;re easily accessible by public transit
-                                        and have street parking available.
+                                        Located on Lalubu Road in the heart of Abeokuta, Ogun State. We&apos;re easily accessible
+                                        by public transport and have convenient parking available.
                                     </CardDescription>
                                 </CardHeader>
                                 <CardContent className="space-y-4">
                                     <div>
                                         <h4 className="font-semibold text-foreground mb-2">Transportation</h4>
                                         <p className="text-sm text-muted-foreground">
-                                            • Metro Station: Downtown Central (2 blocks)<br />
-                                            • Bus Lines: 15, 23, 42<br />
-                                            • Street parking available
+                                            • From Lagos: Take Lagos-Abeokuta Expressway<br />
+                                            • Local buses available from Abeokuta town center<br />
+                                            • Free parking available on-site
                                         </p>
                                     </div>
                                     <div>
                                         <h4 className="font-semibold text-foreground mb-2">Follow Us</h4>
                                         <div className="flex space-x-3">
                                             <a
-                                                href="#"
+                                                href="https://www.instagram.com/bellagio_ng"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
                                                 className="text-muted-foreground hover:text-primary transition-colors duration-200"
                                                 aria-label="Follow us on Instagram"
                                             >
                                                 <Instagram className="h-5 w-5" />
-                                            </a>
-                                            <a
-                                                href="#"
-                                                className="text-muted-foreground hover:text-primary transition-colors duration-200"
-                                                aria-label="Follow us on Facebook"
-                                            >
-                                                <Facebook className="h-5 w-5" />
-                                            </a>
-                                            <a
-                                                href="#"
-                                                className="text-muted-foreground hover:text-primary transition-colors duration-200"
-                                                aria-label="Follow us on Twitter"
-                                            >
-                                                <Twitter className="h-5 w-5" />
                                             </a>
                                         </div>
                                     </div>

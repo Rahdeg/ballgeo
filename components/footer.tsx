@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Coffee, MapPin, Phone, Mail, Instagram, Facebook, Twitter } from "lucide-react";
+import { Coffee, MapPin, Phone, Mail, Instagram } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 
 export function Footer() {
@@ -12,7 +12,7 @@ export function Footer() {
                         <Link href="/" className="flex items-center space-x-2 mb-4">
                             <Coffee className="h-8 w-8 text-primary" />
                             <span className="text-2xl font-serif font-bold text-primary">
-                                Bella Geo
+                                Bellagio Café
                             </span>
                         </Link>
                         <p className="text-muted-foreground text-sm leading-relaxed">
@@ -59,18 +59,18 @@ export function Footer() {
                             <div className="flex items-start space-x-3">
                                 <MapPin className="h-4 w-4 text-primary mt-1 flex-shrink-0" />
                                 <p className="text-muted-foreground text-sm">
-                                    123 Coffee Street<br />
-                                    Downtown District<br />
-                                    City, ST 12345
+                                    18b Lalubu Road<br />
+                                    Oke-Ilewo Road, Abeokuta<br />
+                                    Ogun State, Nigeria
                                 </p>
                             </div>
                             <div className="flex items-center space-x-3">
                                 <Phone className="h-4 w-4 text-primary flex-shrink-0" />
-                                <p className="text-muted-foreground text-sm">(555) 123-4567</p>
+                                <p className="text-muted-foreground text-sm">+234 818 775 8404</p>
                             </div>
                             <div className="flex items-center space-x-3">
                                 <Mail className="h-4 w-4 text-primary flex-shrink-0" />
-                                <p className="text-muted-foreground text-sm">hello@bellageo.com</p>
+                                <p className="text-muted-foreground text-sm">info@bellagiocafé.com</p>
                             </div>
                         </div>
                     </div>
@@ -88,25 +88,13 @@ export function Footer() {
                         </div>
                         <div className="flex space-x-3">
                             <a
-                                href="#"
+                                href="https://www.instagram.com/bellagio_ng"
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 className="text-muted-foreground hover:text-primary transition-colors duration-200"
                                 aria-label="Follow us on Instagram"
                             >
                                 <Instagram className="h-5 w-5" />
-                            </a>
-                            <a
-                                href="#"
-                                className="text-muted-foreground hover:text-primary transition-colors duration-200"
-                                aria-label="Follow us on Facebook"
-                            >
-                                <Facebook className="h-5 w-5" />
-                            </a>
-                            <a
-                                href="#"
-                                className="text-muted-foreground hover:text-primary transition-colors duration-200"
-                                aria-label="Follow us on Twitter"
-                            >
-                                <Twitter className="h-5 w-5" />
                             </a>
                         </div>
                     </div>
@@ -116,7 +104,7 @@ export function Footer() {
 
                 <div className="flex flex-col sm:flex-row justify-between items-center">
                     <p className="text-sm text-muted-foreground">
-                        © 2024 Bella Geo Café & Lounge. All rights reserved.
+                        © 2024 Bellagio Café & Lounge. All rights reserved.
                     </p>
                     <div className="flex space-x-4 mt-4 sm:mt-0">
                         <Link

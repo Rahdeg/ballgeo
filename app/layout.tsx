@@ -15,13 +15,13 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Bella Geo - Artisan Café & Lounge",
-  description: "Experience the perfect blend of artisan coffee, fresh pastries, and cozy ambiance at Bella Geo. Your neighborhood café & lounge in the heart of the city.",
-  keywords: "café, coffee, lounge, artisan, pastries, brunch, cocktails",
-  authors: [{ name: "Bella Geo Café" }],
+  title: "Bellagio Café - Artisan Café & Lounge",
+  description: "Experience the perfect blend of artisan coffee, fresh pastries, and cozy ambiance at Bellagio Café. Your neighborhood café & lounge in Nigeria.",
+  keywords: "café, coffee, lounge, artisan, pastries, brunch, cocktails, Nigeria, Abeokuta, Ogun State",
+  authors: [{ name: "Bellagio Café" }],
   openGraph: {
-    title: "Bella Geo - Artisan Café & Lounge",
-    description: "Experience the perfect blend of artisan coffee, fresh pastries, and cozy ambiance at Bella Geo.",
+    title: "Bellagio Café - Artisan Café & Lounge",
+    description: "Experience the perfect blend of artisan coffee, fresh pastries, and cozy ambiance at Bellagio Café.",
     type: "website",
   },
 };

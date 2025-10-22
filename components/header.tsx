@@ -25,7 +25,7 @@ export function Header() {
                     <Link href="/" className="flex items-center space-x-2">
                         <Coffee className="h-8 w-8 text-primary" />
                         <span className="text-2xl font-serif font-bold text-primary">
-                            Bella Geo
+                            Bellagio Café
                         </span>
                     </Link>
 
@@ -67,7 +67,7 @@ export function Header() {
                                     >
                                         <Coffee className="h-6 w-6 text-primary" />
                                         <span className="text-xl font-serif font-bold text-primary">
-                                            Bella Geo
+                                            Bellagio Café
                                         </span>
                                     </Link>
                                 </div>

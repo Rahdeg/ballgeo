@@ -11,7 +11,7 @@ const featuredItems = [
     id: 1,
     name: "Signature Espresso Blend",
     description: "Our house blend featuring notes of chocolate and caramel, crafted from premium Ethiopian and Colombian beans.",
-    price: "$4.50",
+    price: "₦2,500",
     image: "https://images.unsplash.com/photo-1485808191679-5f86510681a2?w=400&h=400&fit=crop&crop=center",
     badge: "Popular"
   },
@@ -19,7 +19,7 @@ const featuredItems = [
     id: 2,
     name: "Artisan Croissant",
     description: "Buttery, flaky pastry made fresh daily with French butter and organic flour.",
-    price: "$3.75",
+    price: "₦2,000",
     image: "https://images.unsplash.com/photo-1549007953-2f2dc0b24019?w=400&h=400&fit=crop&crop=center",
     badge: "Fresh Daily"
   },
@@ -27,7 +27,7 @@ const featuredItems = [
     id: 3,
     name: "Lavender Honey Latte",
     description: "A soothing blend of espresso, steamed milk, and locally sourced lavender honey.",
-    price: "$5.25",
+    price: "₦3,000",
     image: "https://images.unsplash.com/photo-1578314675249-a6910f80cc4e?w=400&h=400&fit=crop&crop=center",
     badge: "Seasonal"
   }
@@ -36,19 +36,19 @@ const featuredItems = [
 const testimonials = [
   {
     id: 1,
-    name: "Sarah Johnson",
+    name: "Adunni Oladele",
     text: "The perfect spot for my morning coffee and remote work. The atmosphere is incredibly welcoming and the coffee is exceptional.",
     rating: 5
   },
   {
     id: 2,
-    name: "Michael Chen",
-    text: "Bella Geo has become our go-to date night spot. The evening ambiance with soft lighting and jazz music is simply perfect.",
+    name: "Olumide Adebayo",
+    text: "Bellagio Café has become our go-to date night spot. The evening ambiance with soft lighting and jazz music is simply perfect.",
     rating: 5
   },
   {
     id: 3,
-    name: "Emily Rodriguez",
+    name: "Funmilayo Akinwale",
     text: "Amazing pastries and the friendliest staff in town. This place feels like a warm hug every time I visit.",
     rating: 5
   }
@@ -61,8 +61,8 @@ export default function Home() {
       <section className="relative h-[90vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?w=1920&h=1080&fit=crop&crop=center"
-            alt="Cozy café interior with warm lighting"
+            src="/hero.png"
+            alt="Bellagio Café interior with warm lighting"
             width={1920}
             height={1080}
             className="object-cover w-full h-full"
@@ -73,7 +73,7 @@ export default function Home() {
 
         <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
           <h1 className="text-5xl md:text-7xl font-serif font-bold mb-6 leading-tight">
-            Welcome to <span className="text-accent">Bella Geo</span>
+            Welcome to <span className="text-accent">Bellagio Café</span>
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-2xl mx-auto leading-relaxed">
             Where exceptional coffee meets warm community. Experience artisan craftsmanship in every cup.
@@ -82,7 +82,7 @@ export default function Home() {
             <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-lg px-8 py-3">
               <Link href="/menu">View Our Menu</Link>
             </Button>
-            <Button asChild variant="outline" size="lg" className="text-lg px-8 py-3 border-white text-white hover:bg-white hover:text-primary">
+            <Button asChild variant="outline" size="lg" className="text-lg px-8 py-3 border-white hover:bg-white text-primary">
               <Link href="/contact">Book a Table</Link>
             </Button>
           </div>
@@ -98,12 +98,12 @@ export default function Home() {
                 Our Story
               </h2>
               <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                Born from a passion for exceptional coffee and genuine community, Bella Geo opened its doors in 2019.
-                We believe that great coffee is more than just a beverage—it&apos;s a catalyst for connection, conversation, and creativity.
+                Born from a passion for exceptional coffee and genuine community, Bellagio Café opened its doors in 2019.
+                We believe that great coffee is more than just a beverage—it&apos;s a catalyst for connection, conversation, and creativity in the heart of Abeokuta.
               </p>
               <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                Every morning, we carefully craft each cup using ethically sourced beans from sustainable farms around the world.
-                Our cozy lounge space provides the perfect backdrop for work, study, or simply enjoying life&apos;s simple pleasures.
+                Every morning, we carefully craft each cup using ethically sourced beans from Nigerian farms and sustainable farms across Africa.
+                Our cozy lounge space provides the perfect backdrop for business meetings, study sessions, or simply enjoying life&apos;s simple pleasures with friends and family.
               </p>
               <Button asChild variant="outline" size="lg">
                 <Link href="/about">Learn More About Us</Link>
@@ -112,7 +112,7 @@ export default function Home() {
             <FadeIn direction="left" delay={0.2}>
               <div className="relative h-[500px] rounded-lg overflow-hidden">
                 <Image
-                  src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=600&h=500&fit=crop&crop=center"
+                  src="/lounge.jpg"
                   alt="Barista carefully preparing coffee"
                   width={600}
                   height={500}
@@ -139,7 +139,7 @@ export default function Home() {
           <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {featuredItems.map((item) => (
               <StaggerItem key={item.id}>
-                <Card className="overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                <Card className="overflow-hidden hover:shadow-lg transition-shadow duration-300 h-full flex flex-col">
                   <div className="relative h-64">
                     <Image
                       src={item.image}
@@ -152,12 +152,12 @@ export default function Home() {
                       {item.badge}
                     </Badge>
                   </div>
-                  <CardHeader>
-                    <div className="flex justify-between items-start">
+                  <CardHeader className="flex-1 flex flex-col">
+                    <div className="flex justify-between items-start mb-2">
                       <CardTitle className="text-xl font-serif">{item.name}</CardTitle>
                       <span className="text-lg font-semibold text-primary">{item.price}</span>
                     </div>
-                    <CardDescription className="text-muted-foreground">
+                    <CardDescription className="text-muted-foreground flex-1">
                       {item.description}
                     </CardDescription>
                   </CardHeader>
@@ -189,14 +189,14 @@ export default function Home() {
           <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {testimonials.map((testimonial) => (
               <StaggerItem key={testimonial.id}>
-                <Card className="text-center">
-                  <CardHeader>
+                <Card className="text-center h-full flex flex-col">
+                  <CardHeader className="flex-1 flex flex-col">
                     <div className="flex justify-center mb-4">
                       {[...Array(testimonial.rating)].map((_, i) => (
                         <Star key={i} className="h-5 w-5 fill-accent text-accent" />
                       ))}
                     </div>
-                    <CardDescription className="text-lg italic leading-relaxed">
+                    <CardDescription className="text-lg italic leading-relaxed flex-1">
                       &ldquo;{testimonial.text}&rdquo;
                     </CardDescription>
                   </CardHeader>
@@ -214,7 +214,7 @@ export default function Home() {
       <section className="py-16 lg:py-24 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl lg:text-5xl font-serif font-bold mb-6">
-            Ready to Experience Bella Geo?
+            Ready to Experience Bellagio Café?
           </h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto leading-relaxed">
             Join us for exceptional coffee, delicious food, and warm hospitality. We can&apos;t wait to welcome you.
@@ -223,7 +223,7 @@ export default function Home() {
             <Button asChild size="lg" variant="secondary" className="text-lg px-8 py-3">
               <Link href="/contact">Visit Us Today</Link>
             </Button>
-            <Button asChild size="lg" variant="outline" className="text-lg px-8 py-3 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
+            <Button asChild size="lg" variant="outline" className="text-lg px-8 py-3 border-primary-foreground  hover:bg-primary-foreground text-primary">
               <Link href="/gallery">See Our Space</Link>
             </Button>
           </div>

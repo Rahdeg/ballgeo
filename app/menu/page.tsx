@@ -5,45 +5,43 @@ import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 
 export const metadata: Metadata = {
-    title: "Menu - Bella Geo Café & Lounge",
+    title: "Menu - Bellagio Café & Lounge",
     description: "Explore our carefully crafted menu featuring artisan coffee, fresh pastries, hearty brunch options, and signature cocktails.",
-};
-
-const menuSections = [
+}; const menuSections = [
     {
         title: "Coffee & Espresso",
         items: [
             {
                 name: "Signature Espresso Blend",
                 description: "Our house blend with notes of chocolate and caramel",
-                price: "$4.50",
+                price: "₦2,500",
                 badges: ["Popular"]
             },
             {
                 name: "Single Origin Ethiopian",
                 description: "Bright, floral notes with hints of berry",
-                price: "$5.00",
+                price: "₦2,800",
                 badges: ["Limited"]
             },
             {
                 name: "Classic Americano",
                 description: "Rich espresso with hot water",
-                price: "$3.75"
+                price: "₦2,200"
             },
             {
                 name: "Cappuccino",
                 description: "Equal parts espresso, steamed milk, and foam",
-                price: "$4.25"
+                price: "₦2,400"
             },
             {
                 name: "Caramel Macchiato",
                 description: "Vanilla syrup, steamed milk, espresso, and caramel drizzle",
-                price: "$5.50"
+                price: "₦3,200"
             },
             {
                 name: "Mocha",
                 description: "Espresso, chocolate, steamed milk, whipped cream",
-                price: "$5.25"
+                price: "₦3,000"
             }
         ]
     },
@@ -53,24 +51,24 @@ const menuSections = [
             {
                 name: "Lavender Honey Latte",
                 description: "Espresso, steamed milk, lavender honey, dried lavender",
-                price: "$5.75",
+                price: "₦3,200",
                 badges: ["Seasonal"]
             },
             {
                 name: "Golden Turmeric Latte",
                 description: "Turmeric, ginger, cinnamon, steamed oat milk",
-                price: "$5.25",
+                price: "₦3,000",
                 badges: ["Vegan"]
             },
             {
                 name: "Matcha Latte",
                 description: "Premium ceremonial grade matcha with steamed milk",
-                price: "$5.50"
+                price: "₦3,100"
             },
             {
                 name: "Chai Spice Latte",
                 description: "House-made chai blend with warm spices",
-                price: "$4.75"
+                price: "₦2,700"
             }
         ]
     },
@@ -80,22 +78,22 @@ const menuSections = [
             {
                 name: "Earl Grey",
                 description: "Classic black tea with bergamot",
-                price: "$3.50"
+                price: "₦2,000"
             },
             {
                 name: "Chamomile Dreams",
                 description: "Soothing chamomile with honey notes",
-                price: "$3.75"
+                price: "₦2,200"
             },
             {
                 name: "Green Dragon Well",
                 description: "Delicate Chinese green tea",
-                price: "$4.00"
+                price: "₦2,300"
             },
             {
                 name: "Peppermint Fresh",
                 description: "Refreshing peppermint leaves",
-                price: "$3.50"
+                price: "₦2,000"
             }
         ]
     },
@@ -105,28 +103,28 @@ const menuSections = [
             {
                 name: "Artisan Croissant",
                 description: "Buttery, flaky pastry made with French butter",
-                price: "$3.75",
+                price: "₦2,200",
                 badges: ["Fresh Daily"]
             },
             {
                 name: "Almond Danish",
                 description: "Sweet pastry filled with almond cream",
-                price: "$4.25"
+                price: "₦2,500"
             },
             {
                 name: "Chocolate Muffin",
                 description: "Rich chocolate muffin with chocolate chips",
-                price: "$3.50"
+                price: "₦2,000"
             },
             {
                 name: "Blueberry Scone",
                 description: "Traditional scone with fresh blueberries",
-                price: "$3.95"
+                price: "₦2,300"
             },
             {
                 name: "Cinnamon Roll",
                 description: "Warm cinnamon roll with cream cheese glaze",
-                price: "$4.50",
+                price: "₦2,600",
                 badges: ["Popular"]
             }
         ]
@@ -137,28 +135,28 @@ const menuSections = [
             {
                 name: "Avocado Toast",
                 description: "Smashed avocado on sourdough with everything seasoning",
-                price: "$8.95"
+                price: "₦5,200"
             },
             {
                 name: "Breakfast Sandwich",
                 description: "Scrambled eggs, cheddar, bacon on brioche",
-                price: "$9.50"
+                price: "₦5,500"
             },
             {
                 name: "Greek Yogurt Bowl",
                 description: "House granola, fresh berries, honey drizzle",
-                price: "$7.25"
+                price: "₦4,200"
             },
             {
-                name: "Bella Benedict",
+                name: "Bellagio Benedict",
                 description: "Poached eggs, prosciutto, hollandaise on English muffin",
-                price: "$12.95",
+                price: "₦7,500",
                 badges: ["Signature"]
             },
             {
                 name: "Quinoa Salad Bowl",
                 description: "Quinoa, roasted vegetables, tahini dressing",
-                price: "$11.50",
+                price: "₦6,700",
                 badges: ["Vegan"]
             }
         ]
@@ -169,28 +167,28 @@ const menuSections = [
             {
                 name: "Espresso Martini",
                 description: "Vodka, coffee liqueur, fresh espresso",
-                price: "$12.00",
+                price: "₦7,000",
                 badges: ["Signature"]
             },
             {
                 name: "Honey Lavender Gin",
                 description: "Gin, lavender honey, lemon, prosecco",
-                price: "$11.50"
+                price: "₦6,700"
             },
             {
                 name: "Spiced Old Fashioned",
                 description: "Bourbon, maple syrup, aromatic bitters",
-                price: "$13.00"
+                price: "₦7,500"
             },
             {
                 name: "Aperol Spritz",
                 description: "Aperol, prosecco, soda water, orange",
-                price: "$10.50"
+                price: "₦6,100"
             },
             {
                 name: "Local Wine",
                 description: "Selection of regional wines by the glass",
-                price: "$8.00 - $14.00"
+                price: "₦4,500 - ₦8,200"
             }
         ]
     }
@@ -203,8 +201,8 @@ export default function Menu() {
             <section className="relative h-[50vh] flex items-center justify-center overflow-hidden">
                 <div className="absolute inset-0 z-0">
                     <Image
-                        src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=1920&h=600&fit=crop&crop=center"
-                        alt="Beautiful coffee and pastries display"
+                        src="/hero.png"
+                        alt="Bellagio Café coffee and pastries display"
                         width={1920}
                         height={600}
                         className="object-cover w-full h-full"

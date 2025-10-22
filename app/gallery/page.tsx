@@ -86,8 +86,8 @@ export default function Gallery() {
             <section className="relative h-[50vh] flex items-center justify-center overflow-hidden">
                 <div className="absolute inset-0 z-0">
                     <Image
-                        src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?w=1920&h=600&fit=crop&crop=center"
-                        alt="Gallery preview of café interior"
+                        src="/hero.png"
+                        alt="Bellagio Café interior gallery preview"
                         width={1920}
                         height={600}
                         className="object-cover w-full h-full"
@@ -116,8 +116,8 @@ export default function Gallery() {
                                 key={category}
                                 variant={selectedCategory === category ? "default" : "outline"}
                                 className={`cursor-pointer px-4 py-2 text-sm font-medium transition-colors duration-200 ${selectedCategory === category
-                                        ? "bg-primary text-primary-foreground hover:bg-primary/90"
-                                        : "hover:bg-muted"
+                                    ? "bg-primary text-primary-foreground hover:bg-primary/90"
+                                    : "hover:bg-muted"
                                     }`}
                                 onClick={() => setSelectedCategory(category)}
                             >
