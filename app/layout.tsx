@@ -24,6 +24,9 @@ export const metadata: Metadata = {
     description: "Experience the perfect blend of artisan coffee, fresh pastries, and cozy ambiance at Bellagio Café.",
     type: "website",
   },
+  icons: {
+    icon: "/logo.svg",
+  },
 };
 
 export default function RootLayout({
