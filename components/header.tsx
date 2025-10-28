@@ -5,6 +5,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu, Coffee, X } from "lucide-react";
+import Image from "next/image";
 
 const navigation = [
     { name: "Home", href: "/" },
@@ -22,11 +23,15 @@ export function Header() {
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex h-16 items-center justify-between">
                     {/* Logo */}
-                    <Link href="/" className="flex items-center space-x-2">
-                        <Coffee className="h-8 w-8 text-primary" />
-                        <span className="text-2xl font-serif font-bold text-primary">
-                            Bellagio Café
-                        </span>
+                    <Link href="/" className="flex items-center space-x-2 h-12 ">
+                        <Image
+                            src="/logo.png"
+                            alt="Bellagio Café Logo"
+                            width={120}
+                            height={48}
+                            className="object-contain"
+                            priority
+                        />
                     </Link>
 
                     {/* Desktop Navigation */}
@@ -60,16 +65,20 @@ export function Header() {
                         <SheetContent side="right" className="w-[300px] sm:w-[400px]">
                             <div className="flex flex-col h-full">
                                 <div className="flex items-center justify-between pb-4 border-b">
-                                    <Link
-                                        href="/"
-                                        className="flex items-center space-x-2"
-                                        onClick={() => setIsOpen(false)}
-                                    >
-                                        <Coffee className="h-6 w-6 text-primary" />
-                                        <span className="text-xl font-serif font-bold text-primary">
-                                            Bellagio Café
-                                        </span>
+
+                                    <Link href="/" className="flex items-center space-x-2 h-12 "
+                                        onClick={() => setIsOpen(false)}>
+                                        <Image
+                                            src="/logo.png"
+                                            alt="Bellagio Café Logo"
+                                            width={120}
+                                            height={32}
+                                            className="object-contain"
+                                            priority
+                                        />
                                     </Link>
+
+
                                 </div>
                                 <nav className="flex flex-col space-y-4 mt-8">
                                     {navigation.map((item) => (

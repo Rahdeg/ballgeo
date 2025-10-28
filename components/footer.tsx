@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Coffee, MapPin, Phone, Mail, Instagram } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
+import Image from "next/image";
 
 export function Footer() {
     return (
@@ -9,11 +10,15 @@ export function Footer() {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     {/* Logo and Description */}
                     <div className="lg:col-span-1">
-                        <Link href="/" className="flex items-center space-x-2 mb-4">
-                            <Coffee className="h-8 w-8 text-primary" />
-                            <span className="text-2xl font-serif font-bold text-primary">
-                                Bellagio Café
-                            </span>
+                        <Link href="/" className="flex items-center space-x-2 h-12 ">
+                            <Image
+                                src="/logo.png"
+                                alt="Bellagio Café Logo"
+                                width={120}
+                                height={48}
+                                className="object-contain"
+                                priority
+                            />
                         </Link>
                         <p className="text-muted-foreground text-sm leading-relaxed">
                             Your neighborhood artisan café & lounge, serving exceptional coffee,
